@@ -6,6 +6,10 @@ html {
           box-sizing: border-box;
 }
 
+hr {
+  border-top: 3px solid black;
+}
+
 .header {
   background-image: url("../media/header.jpg");
   width: 100%;
