@@ -1,10 +1,41 @@
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
 $colors: (
-    black: #000000;
-    white: #ffffff;
-    light-purple: #ffc4ff;
-    purple: #ce93d8;
-    dark-purple: #9c64a6;
-    light-pink: #fff4ff;
-    pink: #ffc1e3;
-    dark-pink: #cb90b1;
+    black: #000000,
+    white: #ffffff,
+    light-purple: #ffc4ff,
+    purple: #ce93d8,
+    dark-purple: #9c64a6,
+    light-pink: #ffe0ff,
+    pink: #ffc1e3,
+    dark-pink: #cb90b1
 );
+
+$desktop: 1100px;
+$laptop: 1100px;
+$tablet: 900px;
+$mobile: 600px;
+
+@mixin desktop {
+  @media(max-width: #{$desktop}){
+    @content;
+  }
+}
+@mixin laptop {
+  @media(max-width: #{$laptop}){
+    @content;
+  }
+}
+@mixin tablet {
+  @media(max-width: #{$tablet}){
+    @content;
+  }
+}
+
+@mixin mobile {
+    @media(max-width: #{$desktop}){
+      @content;
+    }
+  }

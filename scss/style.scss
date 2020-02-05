@@ -1,3 +1,6 @@
+@import "_variables.scss";
+@import "_animations.scss";
+
 html{
     padding: 0;
     margin: 0;
@@ -6,37 +9,107 @@ html{
 }
 
 body{
-
+    font-family: 'Questrial', sans-serif;
+    margin: 0;
 }
 
 hr{
-    border-top: 3px solid /*CHANGE*/black/*CHANGE*/;
+     border-top: 3px solid /*CHANGE*/black/*CHANGE*/;
 }
   
-
 .header{
-    background-image: url("../media/header.jpg");
-    width: 100%;
+    background-image: url("../media/header.jpg"); /* fix quality of this image pls */
+    background-size: cover;
+    width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;    
+    justify-content: center;
+    align-items: center;    
     font-weight: bold;
 }
 
 .header-text-1{
     font-size: 10rem;
-    font-family: 'Questrial', sans-serif;
     text-align: center;
     font-weight: bold;
     color: #CE93D8;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*stroke*/ 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*stroke*/
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.3,0,.3,1);
+    animation-iteration-count: 1;
+    @include laptop {
+        font-size: 10rem;
+    }
+    @include tablet {
+        font-size: 10rem;
+    }
+    @include mobile {
+        font-size: 5rem;
+    }
 }
 
 .header-text-2{
     font-size: 5rem;
-    font-family: 'Questrial', sans-serif;
     text-align: center;
     color: #CE93D8;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*stroke*/ 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*1px stroke*/
+    animation-name: fadein-delayed;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.3,0,.3,1);
+    animation-iteration-count: 1;
+    @include laptop {
+        font-size: 5rem;
+    }
+    @include tablet {
+        font-size: 5rem;
+    }
+    @include mobile {
+        font-size: 2.5rem;
+    }
 }
+
+.intro{
+    height: 100vh;
+    width: 100vw;
+    background-color: color(pink);    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro > div{
+    height: 12rem;
+    width: 80%;
+    margin: 2rem;
+}
+
+.intro-title{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.intro-title-title{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.intro-image{
+    background-color: #fff;
+    flex-grow: 1;
+}
+
+.intro-subtitle{
+   background-color: blue;
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+}
+
+.intro-subtitle-subtitle{
+    font-size: 3rem;
+ }
+

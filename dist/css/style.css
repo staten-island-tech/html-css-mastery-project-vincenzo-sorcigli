@@ -1,3 +1,75 @@
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein-delayed {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-delayed {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 html {
   padding: 0;
   margin: 0;
@@ -6,42 +78,166 @@ html {
           box-sizing: border-box;
 }
 
+body {
+  font-family: 'Questrial', sans-serif;
+  margin: 0;
+}
+
 hr {
   border-top: 3px solid black;
 }
 
 .header {
   background-image: url("../media/header.jpg");
-  width: 100%;
+  /* fix quality of this image pls */
+  background-size: cover;
+  width: 100vw;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: bold;
 }
 
 .header-text-1 {
   font-size: 10rem;
-  font-family: 'Questrial', sans-serif;
   text-align: center;
   font-weight: bold;
   color: #CE93D8;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   /*stroke*/
+  -webkit-animation-name: fadein;
+          animation-name: fadein;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
+          animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@media (max-width: 1100px) {
+  .header-text-1 {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-text-1 {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header-text-1 {
+    font-size: 5rem;
+  }
 }
 
 .header-text-2 {
   font-size: 5rem;
-  font-family: 'Questrial', sans-serif;
   text-align: center;
   color: #CE93D8;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  /*stroke*/
+  /*1px stroke*/
+  -webkit-animation-name: fadein-delayed;
+          animation-name: fadein-delayed;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
+          animation-timing-function: cubic-bezier(0.3, 0, 0.3, 1);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@media (max-width: 1100px) {
+  .header-text-2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-text-2 {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .header-text-2 {
+    font-size: 2.5rem;
+  }
+}
+
+.intro {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffc1e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro > div {
+  height: 12rem;
+  width: 80%;
+  margin: 2rem;
+}
+
+.intro-title {
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro-title-title {
+  font-size: 6rem;
+  text-align: center;
+}
+
+.intro-image {
+  background-color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.intro-subtitle {
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro-subtitle-subtitle {
+  font-size: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
