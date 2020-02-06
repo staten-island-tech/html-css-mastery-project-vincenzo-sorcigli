@@ -18,7 +18,7 @@ hr{
 }
   
 .header{
-    background-image: url("../media/header.jpg"); /* fix quality of this image pls */
+    background-image: url("../media/header.jpg"); /* fix quality of this image pls  */
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -74,7 +74,7 @@ hr{
     width: 100vw;
     background-color: color(pink);    
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -83,6 +83,17 @@ hr{
     height: 12rem;
     width: 80%;
     margin: 2rem;
+    @include laptop {
+
+    }
+    @include tablet {
+        width: 90%;
+        height: 6rem;
+    }
+    @include mobile {
+        width: 90%;
+        height: 6rem;
+    }
 }
 
 .intro-title{
@@ -98,18 +109,66 @@ hr{
 }
 
 .intro-image{
+    display: flex;
+    justify-content: center;
     background-color: #fff;
     flex-grow: 1;
+    @include laptop {
+
+    }
+    @include tablet {
+        flex-direction: column;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.intro-image-image{
+    width: 20vw;
+    height: 62.8vh;
+    margin: 0 2rem;
+    background-image: url("../media/intro.jpg");
+    background-size: cover;
+    @include laptop {
+
+    }
+    @include tablet {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include mobile {
+        width: 100%;
+        margin: 5px auto;
+    }
 }
 
 .intro-subtitle{
-   background-color: blue;
-   display: flex;
-   justify-content: center;
-   align-items: center;   
-}
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    @include laptop {
 
+    }
+    @include tablet {
+
+    }
+    @include mobile {
+
+    }
+}
 .intro-subtitle-subtitle{
     font-size: 3rem;
+    text-align: center;
+    @include laptop {
+
+    }
+    @include tablet {
+        font-size: 2rem;
+    }
+    @include mobile {
+        font-size: 1.5rem;
+    }
  }
 
