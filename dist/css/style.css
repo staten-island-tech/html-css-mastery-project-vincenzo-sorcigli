@@ -281,6 +281,7 @@ hr {
   margin: 0 2rem;
   background-image: url("../media/intro.jpg");
   background-size: cover;
+  border: 0rem solid white;
 }
 
 @media (max-width: 900px) {
@@ -295,6 +296,17 @@ hr {
     width: 100%;
     margin: 5px auto;
   }
+}
+
+.intro-image-image:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 1rem solid white;
+  border-radius: 5px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 
 .intro-subtitle {
