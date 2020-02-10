@@ -11,6 +11,7 @@ html{
 body{
     font-family: 'Questrial', sans-serif;
     margin: 0;
+    padding: 0;
 }
 
 hr{
@@ -20,7 +21,7 @@ hr{
 .header{
     background-image: url("../media/header.jpg"); /* fix quality of this image pls  */
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -71,7 +72,7 @@ hr{
 
 .intro{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: color(pink);    
     display: flex;
     flex-direction: column;
@@ -89,15 +90,16 @@ hr{
     @include tablet {
         width: 90%;
         height: 6rem;
+        margin: 1rem;
     }
     @include mobile {
         width: 90%;
         height: 6rem;
+        margin: 1rem;
     }
 }
 
 .intro-title{
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;   
@@ -106,12 +108,20 @@ hr{
 .intro-title-title{
     font-size: 6rem;
     text-align: center;
+    @include laptop {
+
+    }
+    @include tablet {
+        font-size: 3rem;
+    }
+    @include mobile {
+        font-size: 3rem;
+    }
 }
 
 .intro-image{
     display: flex;
     justify-content: center;
-    background-color: #fff;
     flex-grow: 1;
     @include laptop {
 
@@ -144,7 +154,6 @@ hr{
 }
 
 .intro-subtitle{
-    background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;   
