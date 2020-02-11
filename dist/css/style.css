@@ -282,6 +282,7 @@ hr {
   background-image: url("../media/intro.jpg");
   background-size: cover;
   border: 0rem solid white;
+  border-radius: 5px;
 }
 
 @media (max-width: 900px) {
@@ -302,7 +303,16 @@ hr {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   border: 1rem solid white;
-  border-radius: 5px;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.intro-image-image:not(hover) {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border: 0rem solid white;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   -webkit-animation-timing-function: ease-out;

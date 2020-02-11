@@ -141,6 +141,7 @@ hr{
     background-image: url("../media/intro.jpg");
     background-size: cover;
     border: 0rem solid white;   
+    border-radius: 5px;
     @include laptop {
 
     }
@@ -157,7 +158,13 @@ hr{
 .intro-image-image:hover{
     transform: scale(1.2);
     border: 1rem solid white;
-    border-radius: 5px; 
+    transition: 0.7s;
+    animation-timing-function: ease-out;
+}
+
+.intro-image-image:not(hover){
+    transform: scale(1);
+    border: 0rem solid white;
     transition: 0.7s;
     animation-timing-function: ease-out;
 }
