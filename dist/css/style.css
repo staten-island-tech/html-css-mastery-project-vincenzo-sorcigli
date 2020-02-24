@@ -419,6 +419,7 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  border-radius: 1rem;
 }
 
 .place-image-1 {
@@ -443,10 +444,58 @@ hr {
 .place-image-image-title {
   font-size: 5rem;
   position: absolute;
+  margin: 0;
+  text-align: center;
 }
 
 .place-image-image-description {
   font-size: 2rem;
   position: absolute;
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  margin: 0 2rem;
+}
+
+.place-image-image:hover .place-image-image-title {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.place-image-image:not(hover) .place-image-image-title {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.place-image-image:hover .place-image-image-description {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.place-image-image:not(hover) .place-image-image-description {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
 }
 /*# sourceMappingURL=style.css.map */
