@@ -409,6 +409,16 @@ hr {
   height: 20rem;
   width: 80%;
   background-image: url("../media/placeholder.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 .place-image-1 {
@@ -428,5 +438,15 @@ hr {
   background-color: mediumblue;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.place-image-image-title {
+  font-size: 5rem;
+  position: absolute;
+}
+
+.place-image-image-description {
+  font-size: 2rem;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

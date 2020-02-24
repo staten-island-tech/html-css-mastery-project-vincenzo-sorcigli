@@ -223,7 +223,6 @@ hr{
 
 .place-title-text{
     font-size: 6rem;
-
 }
 
 .place-image{
@@ -240,6 +239,10 @@ hr{
     height: 20rem;
     width: 80%;
     background-image: url("../media/placeholder.png"); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .place-image-1{
@@ -255,5 +258,15 @@ hr{
 .place-image-3{
     background-color: mediumblue;   
     align-self: flex-end;
+}
+
+.place-image-image-title{
+    font-size: 5rem;
+    position: absolute;
+}
+
+.place-image-image-description{
+    font-size: 2rem;
+    position: absolute;
 }
 
