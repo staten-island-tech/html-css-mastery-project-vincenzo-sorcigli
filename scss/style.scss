@@ -16,6 +16,8 @@ body{
 
 hr{
      border-top: 3px solid /*CHANGE*/black/*CHANGE*/;
+     margin: 0;
+     padding: 0;
 }
   
 .header{
@@ -199,7 +201,7 @@ hr{
 }
 
 .place{
-    background-color: orange;
+    background-color: color(purple);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -214,7 +216,6 @@ hr{
 }
 
 .place-title{
-    background-color: green;
     height: 12rem;
     display: flex;
     justify-content: center;
@@ -223,10 +224,18 @@ hr{
 
 .place-title-text{
     font-size: 6rem;
+    @include laptop {
+        font-size: 6rem;
+    }
+    @include tablet {
+        font-size: 4rem;
+    }
+    @include mobile {
+        font-size: 3rem;
+    }
 }
 
 .place-image{
-    background-color: seagreen;
     display: flex;
     flex-direction: column;
 }
@@ -238,26 +247,27 @@ hr{
 .place-image-image{
     height: 20rem;
     width: 80%;
-    background-image: url("../media/placeholder.png"); 
+    background-image: url("../media/place.jpg"); 
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: 1rem;    
+    border-radius: 1rem;
+    background-size: cover;
+    @include mobile {
+        height: 15rem;
+    }    
 }
 
 .place-image-1{
-    background-color: skyblue;
     align-self: flex-start;
 }
 
 .place-image-2{ 
-    background-color: steelblue;
     align-self: center;
 }
 
 .place-image-3{
-    background-color: mediumblue;   
     align-self: flex-end;
 }
 
@@ -266,16 +276,42 @@ hr{
     position: absolute;
     margin: 0;
     text-align: center;
+    color: color(pink);
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*stroke*/
+    @include laptop {
+        font-size: 4.5rem;
+    }
+    @include tablet {
+        font-size: 3.5rem;
+    }
+    @include mobile {
+        font-size: 2.5rem;
+    }
 }
 
 .place-image-image-description{
-    font-size: 2rem;
+    font-size: 2.5rem;
     position: absolute;
     margin: 0;
     text-align: center;
     opacity: 0;
     transform: scale(1.1);
     margin: 0 2rem;
+    padding: 0;
+    color: color(pink);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*stroke*/
+    @include laptop {
+        font-size: 2rem;
+    }
+    @include tablet {
+        font-size: 1.5rem;
+    }
+    @include mobile {
+        font-size: 1.1rem;
+        margin: 0 1rem;
+        text-shadow: none; /*stroke*/
+    }
 }
 
 .place-image-image:hover .place-image-image-title{

@@ -86,6 +86,8 @@ body {
 
 hr {
   border-top: 3px solid black;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -349,7 +351,7 @@ hr {
 }
 
 .place {
-  background-color: orange;
+  background-color: #ce93d8;
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -373,7 +375,6 @@ hr {
 }
 
 .place-title {
-  background-color: green;
   height: 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,8 +391,25 @@ hr {
   font-size: 6rem;
 }
 
+@media (max-width: 900px) {
+  .place-title-text {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .place-title-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .place-title-text {
+    font-size: 3rem;
+  }
+}
+
 .place-image {
-  background-color: seagreen;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,7 +426,7 @@ hr {
 .place-image-image {
   height: 20rem;
   width: 80%;
-  background-image: url("../media/placeholder.png");
+  background-image: url("../media/place.jpg");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,23 +438,27 @@ hr {
           align-items: center;
   position: relative;
   border-radius: 1rem;
+  background-size: cover;
+}
+
+@media (max-width: 1100px) {
+  .place-image-image {
+    height: 15rem;
+  }
 }
 
 .place-image-1 {
-  background-color: skyblue;
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
 
 .place-image-2 {
-  background-color: steelblue;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
 .place-image-3 {
-  background-color: mediumblue;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -446,10 +468,32 @@ hr {
   position: absolute;
   margin: 0;
   text-align: center;
+  color: #ffc1e3;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  /*stroke*/
+}
+
+@media (max-width: 900px) {
+  .place-image-image-title {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .place-image-image-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .place-image-image-title {
+    font-size: 2.5rem;
+  }
 }
 
 .place-image-image-description {
-  font-size: 2rem;
+  font-size: 2.5rem;
   position: absolute;
   margin: 0;
   text-align: center;
@@ -457,6 +501,31 @@ hr {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   margin: 0 2rem;
+  padding: 0;
+  color: #ffc1e3;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  /*stroke*/
+}
+
+@media (max-width: 900px) {
+  .place-image-image-description {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .place-image-image-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .place-image-image-description {
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    text-shadow: none;
+    /*stroke*/
+  }
 }
 
 .place-image-image:hover .place-image-image-title {
