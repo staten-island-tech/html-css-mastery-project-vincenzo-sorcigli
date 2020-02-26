@@ -304,7 +304,7 @@ hr {
 .intro-image-image:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  border: 1rem solid #ce93d8;
+  border: 0.5rem solid #ce93d8;
   -webkit-transition: 0.7s;
   transition: 0.7s;
   -webkit-animation-timing-function: ease-out;
@@ -566,5 +566,51 @@ hr {
   transition: 0.7s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+}
+
+.casino {
+  height: 100vh;
+  width: 100%;
+  background-color: tomato;
+}
+
+.casino-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 1rem;
+}
+
+.casino-title {
+  background-color: blanchedalmond;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.casino-title-text {
+  margin: 0;
+  font-size: 6rem;
+  height: 12rem;
+}
+
+.casino-info-text {
+  background-color: magenta;
+  width: 100%;
+}
+
+.casino-info-image {
+  background-color: lawngreen;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

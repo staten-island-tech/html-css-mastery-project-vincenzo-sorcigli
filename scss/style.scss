@@ -159,7 +159,7 @@ hr{
 
 .intro-image-image:hover{
     transform: scale(1.1);
-    border: 1rem solid color(purple);
+    border: 0.5rem solid color(purple);
     transition: 0.7s;
     animation-timing-function: ease-out;
 }
@@ -343,4 +343,38 @@ hr{
     animation-timing-function: ease-out;
 }
 
+.casino{
+    height: 100vh;
+    width: 100%;
+    background-color: tomato;
+}
 
+.casino-info{
+    display: flex;
+    flex-grow: 1;
+    margin: 1rem;
+}
+
+.casino-title{
+    background-color: blanchedalmond;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casino-title-text{
+    margin: 0;
+    font-size: 6rem;
+    height: 12rem;
+}
+
+.casino-info-text{
+    background-color: magenta;
+    width: 100%;
+}
+
+.casino-info-image{
+    background-color: lawngreen;
+    width: 100%;
+}
