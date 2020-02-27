@@ -352,12 +352,12 @@ hr{
 .casino-info{
     display: flex;
     flex-grow: 1;
-    margin: 1rem;
 }
 
 .casino-title{
-    background-color: blanchedalmond;
-    margin: 1rem;
+    background-color: olive;
+    height: 16rem;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,7 +366,6 @@ hr{
 .casino-title-text{
     margin: 0;
     font-size: 6rem;
-    height: 12rem;
 }
 
 .casino-info-text{
