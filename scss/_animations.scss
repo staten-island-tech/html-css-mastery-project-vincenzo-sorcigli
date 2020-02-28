@@ -27,3 +27,12 @@
         opacity: 1;
     }
 }
+
+@keyframes slideshow{
+    33%{
+        opacity: 1;
+    } 
+    67% {
+        opacity: 0;
+    }
+}
