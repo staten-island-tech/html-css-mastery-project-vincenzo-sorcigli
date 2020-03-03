@@ -351,6 +351,15 @@ hr{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include laptop {
+        
+    }
+    @include tablet {
+
+    }
+    @include mobile {
+
+    }
 }
 
 .casino-title{
@@ -364,6 +373,15 @@ hr{
 .casino-title-text{
     margin: 0;
     font-size: 6rem;
+    @include laptop {
+        font-size: 6rem;
+    }
+    @include tablet {
+        font-size: 4rem;
+    }
+    @include mobile {
+        font-size: 3rem;
+    }
 }
 
 .casino-info{
@@ -371,6 +389,15 @@ hr{
     flex-grow: 1;
     width: 85%;
     align-items: center;
+    @include laptop {
+        
+    }
+    @include tablet {
+        flex-direction: column;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
 }
 
 .casino-info-container{
@@ -380,24 +407,45 @@ hr{
 .casino-info-text{
     width: 100%;
     height: 75%;   
-    margin: 0 1rem;
+    margin: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: justify;
+    @include laptop {
+        
+    }
+    @include tablet {
+
+    }
+    @include mobile {
+        margin: 1rem;
+    }
 }
 
 .casino-info-text-text{
     font-size: 3rem;
+    @include laptop {
+        
+    }
+    @include tablet {
+        font-size: 2rem;
+    }
+    @include mobile {
+        font-size: 1.75rem;
+    }
 }
 
 .casino-info-slideshow{
     background-color: white;
     width: 100%;
-    height: 75%;
+    height: 65%;
     overflow: hidden; 
     position: relative;
     border-radius: 2rem;
+    @include mobile {
+        height: 45%;
+    }
 }
 
 
