@@ -753,4 +753,18 @@ hr {
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
 }
+
+.footer {
+  background-color: #ce93d8;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #9c64a6;
+}
+
+.footer-text-text {
+  margin: 1px;
+  padding: 0;
+  font-size: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
