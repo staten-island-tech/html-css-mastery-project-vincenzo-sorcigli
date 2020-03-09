@@ -19,7 +19,117 @@ hr{
      margin: 0;
      padding: 0;
 }
-  
+
+.navigation-checkbox{
+    display: none;
+}
+
+.navigation-button{
+    background-color: white;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.navigation-icon{
+    position: relative;
+    margin-top: 3.5rem;
+}
+
+.navigation-icon::before, .navigation-icon::after{
+    content: "";
+} 
+
+.navigation-icon::before{
+    position: absolute;
+    top: -.8rem;
+    left: 0;
+}
+
+.navigation-icon::after{
+    position: absolute;
+    top: .8rem;
+    left: 0;
+}
+
+.navigation-icon, .navigation-icon:before, .navigation-icon:after{
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+    transition: all .2s;
+}
+
+.navigation-button:hover .navigation-icon::before{
+    top: -1rem;
+}
+
+.navigation-button:hover .navigation-icon::after{
+    top: 1rem;
+}
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon{
+    background-color: transparent;
+}
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon::before{
+    transform: rotate(135deg);
+    top: 0;
+}
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon::after{
+    transform: rotate(-135deg);
+    top: 0;
+}
+
+.navigation-list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+
+.navigation-item{
+    margin: 1rem;
+}
+
+.navigation-nav{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    /* opacity: 0; */
+    width: 100%;
+    transition: all .8s cubic-bezier(.3,0,.3,1);
+}
+
+.navigation-background{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(
+        rgba(0,0,0,1),
+        rgba(255, 255, 255, 1)
+    );
+    z-index: 1000;
+    transition: transform .8s;
+    transform: scale(80);
+}
+
 .header{
     background-image: url("../media/header.jpg"); /* fix quality of this image pls  */
     background-size: cover;
@@ -484,5 +594,8 @@ hr{
     padding: 0;
     font-size: 2rem;
 }
+
+
+
 
 
