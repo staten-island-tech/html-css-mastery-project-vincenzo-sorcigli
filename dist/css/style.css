@@ -185,8 +185,8 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(10%, -50%);
+          transform: translate(10%, -50%);
   list-style: none;
   text-align: center;
   width: 100%;
@@ -197,13 +197,13 @@ hr {
 }
 
 .navigation-nav {
-  height: 100vh;
+  height: 0%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1500;
-  /* opacity: 0; */
-  width: 100%;
+  opacity: 1;
+  width: 0%;
   -webkit-transition: all 0.8s cubic-bezier(0.3, 0, 0.3, 1);
   transition: all 0.8s cubic-bezier(0.3, 0, 0.3, 1);
 }
@@ -223,6 +223,36 @@ hr {
   transition: transform .8s, -webkit-transform .8s;
   -webkit-transform: scale(80);
           transform: scale(80);
+}
+
+.navigation-link, .navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: black;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 240%;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  color: red;
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+
+.navigation-checkbox:checked ~ .navigation-background {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.navigation-checkbox:checked ~ .navigation-nav {
+  opacity: 1;
+  width: 100%;
 }
 
 .header {
