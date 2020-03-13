@@ -1,0 +1,129 @@
+
+
+.intro{
+    height: 100vh;
+    width: 100%;
+    background-color: color(pink);    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro > div{
+    height: 12rem;
+    width: 80%;
+    margin: 2rem;
+    @include laptop {
+
+    }
+    @include tablet {
+        width: 90%;
+        height: 6rem;
+        margin: 1rem;
+    }
+    @include mobile {
+        width: 90%;
+        height: 6rem;
+        margin: 1rem;
+    }
+}
+
+.intro-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.intro-title-text{
+    font-size: 6rem;
+    text-align: center;
+    @include laptop {
+
+    }
+    @include tablet {
+        font-size: 3rem;
+    }
+    @include mobile {
+        font-size: 3rem;
+    }
+}
+
+.intro-image{
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    @include laptop {
+
+    }
+    @include tablet {
+        flex-direction: column;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.intro-image-image{
+    width: 20vw;
+    height: 62.8vh;
+    margin: 0 2rem;
+    background-image: url("../media/intro.jpg");
+    background-size: cover;
+    border: 0rem solid color(purple);   
+    border-radius: 5px;
+    @include laptop {
+
+    }
+    @include tablet {
+        width: 100%;
+        margin: 0 auto;
+    }
+    @include mobile {
+        width: 100%;
+        margin: 5px auto;
+    }
+}
+
+.intro-image-image:hover{
+    transform: scale(1.1);
+    border: 0.5rem solid color(purple);
+    transition: 0.7s;
+    animation-timing-function: ease-out;
+}
+
+.intro-image-image:not(hover){
+    transform: scale(1);
+    border: 0rem solid color(purple);
+    transition: 0.7s;
+    animation-timing-function: ease-out;
+}
+
+.intro-subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    @include laptop {
+
+    }
+    @include tablet {
+
+    }
+    @include mobile {
+
+    }
+}
+
+.intro-subtitle-text{
+    font-size: 3rem;
+    text-align: center;
+    @include laptop {
+
+    }
+    @include tablet {
+        font-size: 2rem;
+    }
+    @include mobile {
+        font-size: 1.5rem;
+    }
+}

@@ -88,24 +88,49 @@
   }
 }
 
-html {
-  padding: 0;
-  margin: 0;
-  font-size: 62.5%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+@keyframes fadein {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
 }
 
-body {
-  font-family: 'Questrial', sans-serif;
-  margin: 0;
-  padding: 0;
+@keyframes fadein-delayed {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
 }
 
-hr {
-  border-top: 3px solid black;
-  margin: 0;
-  padding: 0;
+@keyframes slideshow {
+  33% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
 }
 
 .navigation-checkbox {
@@ -185,11 +210,11 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(10%, -50%);
-          transform: translate(10%, -50%);
   list-style: none;
   text-align: center;
   width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .navigation-item {
@@ -199,13 +224,13 @@ hr {
 .navigation-nav {
   height: 0%;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 110%;
   z-index: 1500;
   opacity: 1;
-  width: 0%;
-  -webkit-transition: all 0.8s cubic-bezier(0.3, 0, 0.3, 1);
-  transition: all 0.8s cubic-bezier(0.3, 0, 0.3, 1);
+  width: 30rem;
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
 }
 
 .navigation-background {
@@ -221,8 +246,6 @@ hr {
   transition: -webkit-transform .8s;
   transition: transform .8s;
   transition: transform .8s, -webkit-transform .8s;
-  -webkit-transform: scale(80);
-          transform: scale(80);
 }
 
 .navigation-link, .navigation-link:link, .navigation-link:visited {
@@ -239,20 +262,67 @@ hr {
 }
 
 .navigation-link:hover, .navigation-link:active {
-  background-position: 100%;
-  color: red;
-  -webkit-transform: translateX(1rem);
-          transform: translateX(1rem);
+  color: white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #ffc1e3;
+  border-radius: 20%;
 }
 
 .navigation-checkbox:checked ~ .navigation-background {
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(80);
+          transform: scale(80);
 }
 
 .navigation-checkbox:checked ~ .navigation-nav {
   opacity: 1;
-  width: 100%;
+  top: 50%;
+  left: 42%;
+}
+
+@keyframes fadein {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-delayed {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideshow {
+  33% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
 }
 
 .header {
@@ -515,6 +585,51 @@ hr {
   }
 }
 
+@keyframes fadein {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-delayed {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideshow {
+  33% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+}
+
 .place {
   background-color: #ce93d8;
   height: 100vh;
@@ -733,6 +848,51 @@ hr {
           animation-timing-function: ease-out;
 }
 
+@keyframes fadein {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-delayed {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideshow {
+  33% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+}
+
 .casino {
   background-color: #ffc1e3;
   height: 100vh;
@@ -901,6 +1061,51 @@ hr {
           animation-delay: 10s;
 }
 
+@keyframes fadein {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-delayed {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideshow {
+  33% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+}
+
 .footer {
   background-color: #ce93d8;
   width: 100%;
@@ -913,5 +1118,25 @@ hr {
   margin: 1px;
   padding: 0;
   font-size: 2rem;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Questrial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border-top: 3px solid black;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=style.css.map */

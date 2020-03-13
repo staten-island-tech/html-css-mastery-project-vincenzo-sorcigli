@@ -1,0 +1,20 @@
+@import "_variables.scss";
+@import "_animations.scss";
+
+.footer{
+    background-color: color(purple);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid color(dark-purple);
+}
+
+.footer-text{
+
+}
+
+.footer-text-text{
+    margin: 1px;
+    padding: 0;
+    font-size: 2rem;
+}

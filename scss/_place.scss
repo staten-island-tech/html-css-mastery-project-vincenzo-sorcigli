@@ -1,0 +1,145 @@
+@import "_variables.scss";
+@import "_animations.scss";
+
+.place{
+    background-color: color(purple);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.place > div{
+    width: 90%;
+    margin: 2rem;
+}
+
+.place-title{
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.place-title-text{
+    font-size: 6rem;
+    @include laptop {
+        font-size: 6rem;
+    }
+    @include tablet {
+        font-size: 4rem;
+    }
+    @include mobile {
+        font-size: 3rem;
+    }
+}
+
+.place-image{
+    display: flex;
+    flex-direction: column;
+}
+
+.place-image > div{
+    margin: 1rem;
+}
+
+.place-image-image{
+    height: 20rem;
+    width: 80%;
+    background-image: url("../media/place.jpg"); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 1rem;
+    background-size: cover;
+    @include mobile {
+        height: 15rem;
+    }    
+}
+
+.place-image-1{
+    align-self: flex-start;
+}
+
+.place-image-2{ 
+    align-self: center;
+}
+
+.place-image-3{
+    align-self: flex-end;
+}
+
+.place-image-image-title{
+    font-size: 5rem;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    color: color(pink);
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*stroke*/
+    @include laptop {
+        font-size: 4.5rem;
+    }
+    @include tablet {
+        font-size: 3.5rem;
+    }
+    @include mobile {
+        font-size: 2.5rem;
+    }
+}
+
+.place-image-image-description{
+    font-size: 2.5rem;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    opacity: 0;
+    transform: scale(1.1);
+    margin: 0 2rem;
+    padding: 0;
+    color: color(pink);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*stroke*/
+    @include laptop {
+        font-size: 2rem;
+    }
+    @include tablet {
+        font-size: 1.5rem;
+    }
+    @include mobile {
+        font-size: 1.1rem;
+        margin: 0 1rem;
+        text-shadow: none; /*stroke*/
+    }
+}
+
+.place-image-image:hover .place-image-image-title{
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 0.7s;
+    animation-timing-function: ease-out;
+}
+
+.place-image-image:not(hover) .place-image-image-title{
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.7s;
+    animation-timing-function: ease-out;
+}
+
+.place-image-image:hover .place-image-image-description{
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.7s;
+    animation-timing-function: ease-out;
+}
+
+
+.place-image-image:not(hover) .place-image-image-description{
+    opacity: 0;
+    transform: scale(1.1);
+    transition: 0.7s;
+    animation-timing-function: ease-out;
+}
