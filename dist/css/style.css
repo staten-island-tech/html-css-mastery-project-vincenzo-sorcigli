@@ -152,6 +152,27 @@
   cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  .navigation-button {
+    top: 5rem;
+    right: 5rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .navigation-button {
+    top: 4rem;
+    right: 4rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navigation-button {
+    top: 3rem;
+    right: 3rem;
+  }
+}
+
 .navigation-icon {
   position: relative;
   margin-top: 3.5rem;
@@ -246,6 +267,26 @@
   transition: -webkit-transform .8s;
   transition: transform .8s;
   transition: transform .8s, -webkit-transform .8s;
+}
+
+@media (max-width: 900px) {
+  .navigation-background {
+    top: 5.5rem;
+    right: 5.5rem;
+  }
+}
+@media (max-width: 750px) {
+  .navigation-background {
+    top: 4.5rem;
+    right: 4.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navigation-background {
+    top: 3.5rem;
+    right: 3.5rem;
+  }
 }
 
 .navigation-link, .navigation-link:link, .navigation-link:visited {

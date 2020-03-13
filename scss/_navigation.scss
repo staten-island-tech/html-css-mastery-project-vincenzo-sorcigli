@@ -17,6 +17,18 @@
     box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
     text-align: center;
     cursor: pointer;
+    @include laptop {
+        top: 5rem;
+        right: 5rem;
+    }
+    @include tablet {
+        top: 4rem;
+        right: 4rem;
+    }
+    @include mobile {
+        top: 3rem;
+        right: 3rem;
+    }
 }
 
 .navigation-icon{
@@ -108,6 +120,18 @@
     );
     z-index: 1000;
     transition: transform .8s;
+    @include laptop {
+        top: 5.5rem;
+        right: 5.5rem;
+    }
+    @include tablet {
+        top: 4.5rem;
+        right: 4.5rem;
+    }
+    @include mobile {
+        top: 3.5rem;
+        right: 3.5rem;
+    }
 }
 .navigation-link, .navigation-link:link, .navigation-link:visited{
     display: inline-block;
