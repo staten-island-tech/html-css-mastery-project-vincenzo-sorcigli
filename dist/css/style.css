@@ -185,6 +185,8 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(10%, -50%);
+          transform: translate(10%, -50%);
   list-style: none;
   text-align: center;
   width: 100%;
@@ -197,8 +199,8 @@ hr {
 .navigation-nav {
   height: 0%;
   position: fixed;
-  bottom: 200%;
-  left: 100%;
+  top: 0;
+  left: 0;
   z-index: 1500;
   opacity: 1;
   width: 0%;
@@ -219,6 +221,8 @@ hr {
   transition: -webkit-transform .8s;
   transition: transform .8s;
   transition: transform .8s, -webkit-transform .8s;
+  -webkit-transform: scale(80);
+          transform: scale(80);
 }
 
 .navigation-link, .navigation-link:link, .navigation-link:visited {
@@ -242,14 +246,13 @@ hr {
 }
 
 .navigation-checkbox:checked ~ .navigation-background {
-  -webkit-transform: scale(80);
-          transform: scale(80);
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .navigation-checkbox:checked ~ .navigation-nav {
   opacity: 1;
-  top: 50%;
-  left: 50%;
+  width: 100%;
 }
 
 .header {
