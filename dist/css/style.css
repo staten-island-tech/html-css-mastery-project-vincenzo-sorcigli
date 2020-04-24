@@ -279,7 +279,7 @@
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(black, white);
+  background-image: radial-gradient(#9c64a6, #ce93d8);
   z-index: 1000;
   -webkit-transition: -webkit-transform .8s;
   transition: -webkit-transform .8s;
