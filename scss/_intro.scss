@@ -66,14 +66,14 @@
 
 .intro-image-image{
     width: 20vw;
-    height: 62.8vh;
+    height: 55vh;
     margin: 0 2rem;
     background-image: url("../media/intro.jpg");
     background-size: cover;
     border: 0rem solid color(purple);   
     border-radius: 5px;
     @include laptop {
-
+        height: 1000rem;
     }
     @include tablet {
         width: 100%;
@@ -82,6 +82,7 @@
     @include mobile {
         width: 100%;
         margin: 5px auto;
+        height: 60rem;
     }
 }
 
@@ -101,6 +102,7 @@
 
 .intro-subtitle{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;   
     @include laptop {
@@ -115,8 +117,9 @@
 }
 
 .intro-subtitle-text{
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
+    width: 100%;
     @include laptop {
 
     }
