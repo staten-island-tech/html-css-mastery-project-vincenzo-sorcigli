@@ -68,12 +68,12 @@
     width: 20vw;
     height: 55vh;
     margin: 0 2rem;
-    background-image: url("../media/intro.jpg");
+    background-image: url("../media/logo.png");
     background-size: cover;
     border: 0rem solid color(purple);   
     border-radius: 5px;
     @include laptop {
-        height: 1000rem;
+
     }
     @include tablet {
         width: 100%;
